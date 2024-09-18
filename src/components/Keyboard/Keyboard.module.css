@@ -1,0 +1,40 @@
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+.keyboardRow {
+  display: flex;
+  gap: 5px;
+}
+
+.key {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-text-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.key.spacebar {
+  width: 350px;
+}
+
+.key.backspace {
+  width: 140px;
+}
+
+.key.shiftkey {
+  width: 100px;
+}
+
+.key.active {
+  background-color: var(--hover-primary-color);
+  color: white;
+}

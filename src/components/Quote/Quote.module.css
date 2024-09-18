@@ -1,0 +1,9 @@
+.quoteContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.quote {
+  font-size: 30px;
+}

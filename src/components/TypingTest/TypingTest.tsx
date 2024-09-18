@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { Quote } from "../types/quote";
-import { fetchRandomQuote } from "../api";
+import { QuoteType } from "../../types/quote";
+import { fetchRandomQuote } from "../../api";
+import Keyboard from "../Keyboard/Keyboard";
+import Quote from "../Quote/Quote";
 
 const TypingTest: React.FC = () => {
-  const [quote, setQuote] = useState<Quote | null>(null);
+  const [quote, setQuote] = useState<QuoteType | null>(null);
 
   useEffect(() => {
     const fetchQuote = async () => {
@@ -14,7 +16,10 @@ const TypingTest: React.FC = () => {
   }, []);
 
   return (
-    <div>{quote ? <h3>{quote.content}</h3> : <p>Loading quote...</p>}</div>
+    <>
+      <Quote quote={quote}></Quote>
+      <Keyboard />
+    </>
   );
 };
 
