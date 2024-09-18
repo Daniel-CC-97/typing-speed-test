@@ -1,13 +1,124 @@
-body {
+@import "./styles/variables.css"; /* Import the variables file */
+
+/* 1. CSS Reset / Normalize */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Global font and background settings */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color); /* Use the text color variable */
+  background-color: var(--background-color); /* Set dark background */
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* 3. Global link styles */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover-primary-color); /* Lighter on hover */
+  text-decoration: underline;
+}
+
+/* 4. Image styles */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 5. Button styles */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: var(--primary-color); /* Use the primary color */
+  color: var(--text-color); /* Button text color */
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+button:hover {
+  background-color: var(--hover-primary-color);
+}
+
+/* 6. Input and textarea styles */
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.5em;
+  border: 1px solid var(--border-color); /* Light grey border */
+  border-radius: 4px;
+  background-color: var(--input-background-color); /* Dark background */
+  color: var(--text-color); /* Light text color */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 7. Global heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 0.5em 0;
+  color: var(--text-color); /* Ensure all headings use light text */
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* 8. Flexbox utility classes */
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* 9. Padding and margin utility classes */
+.p-1 {
+  padding: 1rem;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+/* 10. Card Component Styles */
+.card {
+  background-color: var(--card-background-color); /* Dark grey for cards */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow-color); /* Soft shadow */
 }

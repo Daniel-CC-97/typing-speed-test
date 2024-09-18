@@ -1,0 +1,25 @@
+:root {
+  /* Primary Colors */
+  --primary-color: #1e3a8a; /* Dark Blue */
+  --secondary-color: #2563eb; /* Lighter Blue */
+
+  /* Text Colors */
+  --text-color: #f3f4f6; /* Light Grey/White for text */
+  --secondary-text-color: #9ca3af; /* Medium Grey */
+
+  /* Background Colors */
+  --background-color: #121212; /* Black */
+  --card-background-color: #1f2937; /* Dark Grey for cards or sections */
+  --input-background-color: #374151; /* Input background dark grey */
+
+  /* Borders and Shadows */
+  --border-color: #4b5563; /* Light Grey for borders */
+  --shadow-color: rgba(0, 0, 0, 0.6); /* Soft shadow effect */
+
+  /* Hover States */
+  --hover-primary-color: #1d4ed8; /* Brightened Blue */
+  --hover-secondary-color: #3b82f6; /* Lighter Blue on Hover */
+
+  /* Miscellaneous */
+  --error-color: #ef4444; /* Red for error messages */
+}
