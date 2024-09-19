@@ -2,8 +2,39 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
-.quote {
-  font-size: 30px;
+.default,
+.typed,
+.current,
+.space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+.default {
+  color: var(--secondary-text-color);
+}
+
+.current {
+  color: var(--text-color);
+}
+
+.typed {
+  color: #90ee90;
+}
+
+.incorrect {
+  color: red;
+}
+
+.space {
+  opacity: 0;
+  width: 15px;
+  height: 15px;
 }

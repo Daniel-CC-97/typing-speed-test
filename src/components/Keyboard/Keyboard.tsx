@@ -8,7 +8,12 @@ const rows = [
   [" "],
 ];
 
-const Keyboard: React.FC = () => {
+interface KeyboardProps {
+  onKeyPress: (key: string) => void;
+  onKeyRelease: (key: string) => void;
+}
+
+const Keyboard: React.FC<KeyboardProps> = ({ onKeyPress, onKeyRelease }) => {
   const [activeKey, setActiveKey] = useState<string | null>(null);
 
   const handleKeyPress = (event: KeyboardEvent) => {
@@ -21,10 +26,15 @@ const Keyboard: React.FC = () => {
       key = event.key.toUpperCase();
     }
     setActiveKey(key);
+    if (key) {
+      onKeyPress(key);
+    }
   };
 
   const handleKeyRelease = (event: KeyboardEvent) => {
+    let key = event.key.toUpperCase();
     setActiveKey(null);
+    onKeyRelease(key);
   };
 
   useEffect(() => {
@@ -35,7 +45,7 @@ const Keyboard: React.FC = () => {
       window.removeEventListener("keydown", handleKeyPress);
       window.removeEventListener("keyup", handleKeyRelease);
     };
-  }, []);
+  }, [onKeyPress, onKeyRelease]);
 
   return (
     <div className={styles.keyboard}>
